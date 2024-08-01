@@ -1,0 +1,26 @@
+name: Node CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  node:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@master
+
+    - name: Install
+      run: ./entrypoint.sh install
+
+    - name: Lint
+      run: ./entrypoint.sh lint
+
+    - name: Units Tests
+      run: ./entrypoint.sh unit
