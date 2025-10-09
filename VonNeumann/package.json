@@ -1,0 +1,20 @@
+{
+  "name": "VonNeumann",
+  "version": "1.0.0",
+  "description": "VonNeumann ===",
+  "author": "Matthias Morin <mat@tangoman.io>",
+  "license": "MIT",
+  "main": "VonNeumann.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "chai": "^6.2.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^15.11.0",
+    "mocha": "^11.7.4"
+  }
+}
